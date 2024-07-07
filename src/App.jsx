@@ -9,7 +9,7 @@ function App() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/generate', { url });
+      const response = await axios.post('https://qrcode-ahbv.onrender.com/generate', { url });
       setQrCode(response.data.qrCode);
     } catch (error) {
       console.error('Error generating QR code:', error);
